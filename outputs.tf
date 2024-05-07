@@ -6,6 +6,6 @@ output "ALB_ADDRESS" {
   value = aws_lb.alb.dns_name
 }
 
-output "PRIVATE_ALB_ADDRESS" {
-  value = module.alb-private.ALB_ADDRESS
+output "LISTENER_ARN" {
+  value = aws_lb_listener.private.*.arn 
 }
