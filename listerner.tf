@@ -17,6 +17,7 @@ resource "aws_lb_listener" "private" {
   }
 }
 
+
 # Public listener 
 resource "aws_lb_listener" "public" {
   count             = var.INTERNAL ? 0 : 1 

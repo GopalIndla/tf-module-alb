@@ -9,3 +9,11 @@ output "ALB_ADDRESS" {
 output "LISTENER_ARN" {
   value = aws_lb_listener.private.*.arn 
 }
+
+output "PRIVATE_LISTENER_ARN" {
+    value =  aws_lb_listener.private.*.arn
+} 
+
+output "PUBLIC_LISTENER_ARN" {
+    value =  aws_lb_listener.public.*.arn
+} 
