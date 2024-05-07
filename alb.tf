@@ -15,4 +15,10 @@ resource "aws_lb" "alb" {
 
 
 # Public-Module  --->  Public ALB  + Public SG  + Public Subnets 
-# Provate-Module --->  Private ALB + Private SG + Private Subnets 
+# Private-Module --->  Private ALB + Private SG + Private Subnets 
+# listeners should be coming from the application and we will place listeners under the respective component.
+# Bring Up the components 
+    # > If the component is frontend : create them on public subnets and that should be load-balanced by public alb 
+    # > If the component is backend  : create them on private subnets and that should be load-balanced by private alb 
+    
+# >>> VPC ---> DB's ---> ALB ---> Components 
